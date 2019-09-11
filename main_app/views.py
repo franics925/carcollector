@@ -23,3 +23,5 @@ def cars_detail(request, car_id):
 class CarCreate(CreateView):
     model = Car
     fields = '__all__'
+    success_url = '/cars/'
+    
