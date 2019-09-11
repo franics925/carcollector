@@ -34,4 +34,7 @@ class Maintenance(models.Model):
     car = models.ForeignKey(Car, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.get_maintenance_desplay()} on {self.date}"
+        # return f"{self.get_date_display()} on {self.date}"
+        return self.mnType
+    class Meta:
+        ordering = ['-date']

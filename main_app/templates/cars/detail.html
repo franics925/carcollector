@@ -8,6 +8,7 @@
     <span class="card-title">{{ car.model }}</span>
     <p>Make: {{ car.make }}</p>
     <p>Year: {{ car.year }}</p>
+    <p>Mileage: {{ car.mileage }}</p>
   </div>
   <div class="card-action">
     <a href="{% url 'cars_update' car.id %}">Edit</a>
