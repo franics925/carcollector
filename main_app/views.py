@@ -19,9 +19,15 @@ def cars_detail(request, car_id):
     car = Car.objects.get(id=car_id)
     return render(request, 'cars/detail.html', { 'car': car })
 
+class CarUpdate(UpdateView):
+  model = Car
+  fields = '__all__'
+
+class CarDelete(DeleteView):
+  model = Car
+  success_url = '/cars/'
 
 class CarCreate(CreateView):
     model = Car
     fields = '__all__'
     success_url = '/cars/'
-    
