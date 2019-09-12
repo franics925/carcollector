@@ -16,7 +16,7 @@ class Car(models.Model):
     model = models.CharField(max_length=50)
     year = models.IntegerField()
     mileage = models.IntegerField()
-    # drivers = models.ManyToManyField(drivers)
+    # drivers = models.ManyToManyField(Driver)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     def __str__(self):
         return self.model
